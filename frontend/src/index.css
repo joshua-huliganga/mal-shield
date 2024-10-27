@@ -132,6 +132,7 @@ footer {
   border-radius: 6px;
   border: 2px solid #EEE;
   font-size: 16px;
+  font-family: inherit;
 }
 
 .email-input:focus {
