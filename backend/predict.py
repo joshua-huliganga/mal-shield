@@ -1,5 +1,4 @@
 import joblib
-import openai
 
 # *************** FOR URL ***************
 
