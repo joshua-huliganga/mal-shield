@@ -12,7 +12,7 @@ export default function App() {
     const [fade, setFade] = React.useState("fade-in");
     const [submitURL, setSubmitURL] = React.useState(false);
     const [submitEMAIL, setSubmitEMAIL] = React.useState(false);
-    const [model, setModel] = React.useState((new GoogleGenerativeAI('AIzaSyB7mHOBmt0nwdQlvRssIfcShyoUqBwa_Bk')).getGenerativeModel({ model: "gemini-pro" }))
+    const [model, setModel] = React.useState((new GoogleGenerativeAI('key')).getGenerativeModel({ model: "gemini-pro" }))
     const [aiResponse, setAiResponse] = useState(<div></div>);
     const [outputURL, setOutputURL] = useState(false);
     const [outputEMAIL, setOutputEMAIL] = useState(false);
