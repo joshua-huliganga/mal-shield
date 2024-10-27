@@ -74,7 +74,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 1000px;
-  height: 400px;
+  height: 500px;
   align-items: center;
   position: relative;
 }
