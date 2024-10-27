@@ -37,7 +37,11 @@ MalShield is a machine-learning-powered tool designed to help users identify pot
    ```bash
    npm install
 
-3. Start the frontend client:
+3. Add Google Gemini API key to enable Gen AI feature (in the App.jsx file):
+   ```bash
+   const [model, setModel] = React.useState((new GoogleGenerativeAI('INSERT_KEY_HERE')).getGenerativeModel({ model: "gemini-pro" }))
+
+4. Start the frontend client:
    ```bash
    npm run dev
    
