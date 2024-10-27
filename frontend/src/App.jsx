@@ -24,7 +24,7 @@ export default function App() {
                 setParams(prevParams => ({
                     ...prevParams,
                     [name]: value
-                }));
+                }));   
                 // Fade back in
                 setFade("fade-in");
             }, 200); // This should match the duration in the CSS transition
@@ -110,7 +110,7 @@ export default function App() {
                             value={params.email}
                             onChange={handleChange}
                         />
-                        <button className="submit-btn" onClick={() => {setSubmitEMAIL(true)}}>Check link</button>
+                        <button className="submit-btn" onClick={() => {setSubmitEMAIL(true)}}>Check email</button>
                     </div>
                 </div>
                 }
