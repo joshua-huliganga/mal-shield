@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 300px;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    overflow: hidden;
+}
+h1{
+    color: #5271ff;
+    padding: 10px;
+}
+
+input {
+    /* margin-right: auto; */
+    width: 90%;
+    padding: 10px;
+    margin-bottom:10px ;
+    box-sizing: border-box;
+    border:1px solid #5271ff;
+}
+img{
+    width: 250px;
+}
+button {
+    margin-top: 10px;
+    color: white;
+    background: #5271ff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid #5271ff;
+}
