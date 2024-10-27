@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Footer from "./Footer.jsx"
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import logo from "./assets/MShield.png"
+import shield from "./assets/MShield2.png"
 
 export default function App() {
 
@@ -12,7 +14,7 @@ export default function App() {
     const [fade, setFade] = React.useState("fade-in");
     const [submitURL, setSubmitURL] = React.useState(false);
     const [submitEMAIL, setSubmitEMAIL] = React.useState(false);
-    const [model, setModel] = React.useState((new GoogleGenerativeAI('key')).getGenerativeModel({ model: "gemini-pro" }))
+    const [model, setModel] = React.useState((new GoogleGenerativeAI('INSERT_KEY_HERE')).getGenerativeModel({ model: "gemini-pro" }))
     const [aiResponse, setAiResponse] = useState(<div></div>);
     const [outputURL, setOutputURL] = useState(false);
     const [outputEMAIL, setOutputEMAIL] = useState(false);
@@ -120,17 +122,23 @@ export default function App() {
         }
     }
 
+    const myStyles = {
+        color: "#5271ff"
+    }
+
     return (
         <div>
+            <img className="logo" src={logo} />
+            <img className="shield" src={shield} />
             <main>
-                <div class="radio-inputs">
+                <div className="radio-inputs">
                     <label class="radio">
                         <input type="radio" name="tab" checked={params.tab === "url"} value = "url" onChange={handleChange}/>
-                        <span class="name">URL</span>
+                        <span style={params.tab === "url" ? myStyles : {}} className="name">URL</span>
                     </label>
-                    <label class="radio">
+                    <label className="radio">
                         <input type="radio" name="tab" checked={params.tab === "email"} value = "email" onChange={handleChange}/>
-                        <span class="name">Email</span>
+                        <span style={params.tab === "email" ? myStyles : {}} className="name">Email</span>
                     </label>
                 </div>
                 {params.tab === "url" ?
@@ -158,6 +166,7 @@ export default function App() {
                             name="email"
                             value={params.email}
                             onChange={handleChange}
+                            placeholder="Dear Emily, I hope this letter finds you in good spirits! It’s been a while since we last caught up, and I wanted to take a moment to see how you’ve been. Life here has been quite busy. I recently took up gardening, and I’m amazed at how much joy it brings me to watch the plants grow. I even managed to grow some tomatoes, which I’m looking forward to using in my cooking. How’s your new job going? I’d love to hear all about it! Let’s try to meet up soon—perhaps over coffee at that new café downtown? I’ve heard great things about their pastries. Looking forward to hearing from you! Warm regards, Michael Smith"
                         />
                         <button className="submit-btn" onClick={() => {setSubmitEMAIL(true)}}>Check email</button>
                         {loading ? <div className="response"><h3>Loading...</h3></div> : (outputEMAIL && aiResponse)}

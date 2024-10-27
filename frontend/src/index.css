@@ -10,6 +10,7 @@ body {
   font-family: "Karla", sans-serif;
   background-color: #F8F9FA;
   color: #212529;
+  overflow: hidden;
 }
 
 header {
@@ -139,7 +140,6 @@ footer {
 }
 
 .email-input:focus {
-  outline: none;
   font-family: inherit;
 }
 
@@ -172,7 +172,10 @@ button {
 }
 
 .submit-btn:hover {
-  background-color: #EEE;
+  /* background-color: #EEE; */
+  background-color: #5271ff;
+  /* background-image: linear-gradient(to bottom right, #93a7ff, #5271ff); */
+  color: #fff;
 }
 
 .response {
@@ -183,4 +186,20 @@ button {
   width: 60%;
 }
 
+.logo {
+  position: fixed;
+  top: 0px;
+  left: 25px;
+  width: 200px;
+}
 
+/* Styling the image */
+.shield {
+  position: absolute;
+  right: -330px; /* Adjust as needed to partially cut off */
+  bottom: -330px; /* Adjust as needed to partially cut off */
+  z-index: -1; /* Ensure the image is behind other elements */
+  width: 1000px;
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.8; /* Optional: make it slightly transparent */
+}
