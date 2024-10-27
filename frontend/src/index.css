@@ -74,7 +74,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 1000px;
-  height: 500px;
+  min-height: 600px;
   align-items: center;
   position: relative;
 }
@@ -121,6 +121,9 @@ footer {
   box-sizing: border-box;
   padding: 0 10px;
   font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid #EEE;
+
 }
 
 ::placeholder {
@@ -170,6 +173,14 @@ button {
 
 .submit-btn:hover {
   background-color: #EEE;
+}
+
+.response {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 60%;
 }
 
 
